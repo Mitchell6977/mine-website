@@ -574,3 +574,73 @@ blockquote.scripture cite {
   .btn { width: 100%; }
   .intro-music-btn { width: auto; }
 }
+
+/* ---------- 2026-11 polish ---------- */
+.intro { padding-bottom: clamp(1.5rem, 4vw, 2.25rem); }
+.intro-video { max-height: 46vh; }
+.intro-ctas { margin: 1.1rem auto 0; max-width: 760px; }
+.intro .intro-music-btn {
+  background: transparent; border-color: rgba(224, 183, 58, 0.7);
+  font-size: 0.9rem; min-height: 44px; margin-top: 1rem;
+}
+.intro .intro-music-btn:hover { background: rgba(255, 255, 255, 0.08); }
+.intro .intro-music-btn.is-playing { background: var(--gold); border-color: var(--gold); color: var(--navy-dark); }
+.music-credit { text-align: center; font-size: 0.8rem; color: #a8b5c7; margin: 0 0 1rem; }
+.music-credit cite { font-style: italic; }
+.eyebrow-dark { color: var(--gold-text); }
+
+.truths {
+  list-style: none; counter-reset: truth; padding: 0; margin: 0;
+  display: grid; grid-template-columns: repeat(auto-fit, minmax(230px, 1fr)); gap: 1.25rem;
+}
+.truth {
+  counter-increment: truth; position: relative; background: #fff;
+  border: 1px solid var(--border); border-radius: var(--radius); box-shadow: var(--shadow);
+  padding: 3.6rem 1.5rem 1.5rem;
+}
+.truth::before {
+  content: counter(truth); position: absolute; top: 1.25rem; left: 1.5rem;
+  width: 2rem; height: 2rem; border-radius: 50%; background: var(--navy); color: var(--gold-light);
+  font-weight: 700; display: flex; align-items: center; justify-content: center;
+}
+.truth h3 { font-size: 1.25rem; margin-bottom: 0.5rem; }
+.truth p { font-family: 'Playfair Display', Georgia, serif; font-style: italic; color: var(--navy-dark); margin-bottom: 0.5rem; }
+.truth cite { font-style: normal; font-size: 0.9rem; font-weight: 600; color: var(--gold-text); }
+
+.prayer-form { display: grid; gap: 0.5rem; max-width: 560px; margin: 1.5rem auto 0; }
+.prayer-form label { font-weight: 700; color: var(--navy); margin-top: 0.5rem; }
+.prayer-form .optional { font-weight: 400; color: var(--muted); }
+.prayer-form input, .prayer-form textarea {
+  font: inherit; width: 100%; padding: 0.75rem 0.9rem; min-height: 48px;
+  border: 2px solid #94a3b8; border-radius: 8px; background: #fff; color: var(--text);
+}
+.prayer-form input:focus, .prayer-form textarea:focus { border-color: var(--navy); outline: 3px solid var(--gold); outline-offset: 1px; }
+.prayer-form textarea { resize: vertical; min-height: 140px; }
+.prayer-form .btn { margin-top: 1rem; width: 100%; border: 0; cursor: pointer; font-family: inherit; }
+
+.live-facade {
+  position: absolute; inset: 0; width: 100%; height: 100%; border: 0; cursor: pointer;
+  background: radial-gradient(circle at 50% 40%, #24477a 0%, var(--navy-dark) 70%);
+  color: #fff; display: flex; flex-direction: column; align-items: center; justify-content: center;
+  gap: 0.5rem; font: inherit; padding: 1rem; text-align: center;
+}
+.live-play {
+  width: 76px; height: 76px; border-radius: 50%; background: var(--gold);
+  display: flex; align-items: center; justify-content: center; box-shadow: 0 6px 24px rgba(0,0,0,.35);
+  transition: transform .15s;
+}
+.live-play svg { width: 40px; height: 40px; fill: var(--navy-dark); margin-left: 4px; }
+.live-facade:hover .live-play { transform: scale(1.06); }
+.live-facade-title { font-family: 'Playfair Display', Georgia, serif; font-size: clamp(1.2rem, 3vw, 1.6rem); font-weight: 700; color: var(--gold-light); }
+.live-facade-sub { font-size: 0.95rem; color: #cbd5e1; }
+
+.footer-social { display: flex; flex-wrap: wrap; gap: 0.25rem 1rem; }
+.site-footer li a { min-height: 44px; }
+
+@media (max-width: 600px) {
+  .intro-video { max-height: none; }
+  .intro-ctas { gap: 0.6rem; max-width: 360px; }
+  .intro-ctas .btn { min-height: 50px; padding: 0.7rem 1.2rem; }
+  .hero { padding: 2.5rem 0; }
+  .truth { padding: 3.4rem 1.25rem 1.25rem; }
+}

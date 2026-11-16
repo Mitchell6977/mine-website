@@ -82,3 +82,34 @@
     else audio.pause();
   });
 })();
+
+// Prayer request form: opens the visitor's email app with the request filled in
+(function () {
+  var form = document.getElementById('prayer-form');
+  if (!form) return;
+  form.addEventListener('submit', function (e) {
+    e.preventDefault();
+    var name = form.querySelector('#pr-name').value.trim();
+    var req = form.querySelector('#pr-request').value.trim();
+    if (!req) { form.querySelector('#pr-request').focus(); return; }
+    var body = (name ? 'First name: ' + name + '\r\n\r\n' : '') + 'Please pray for:\r\n' + req + '\r\n';
+    window.location.href = 'mailto:contact@minee.us?subject=' + encodeURIComponent('Prayer Request' + (name ? ' from ' + name : '')) +
+      '&body=' + encodeURIComponent(body);
+  });
+})();
+
+// Watch Live: load the YouTube player only when the visitor taps it
+(function () {
+  var btn = document.getElementById('live-facade');
+  if (!btn) return;
+  btn.addEventListener('click', function () {
+    var f = document.createElement('iframe');
+    f.src = btn.getAttribute('data-src');
+    f.title = 'M.I.N.E. Live Stream';
+    f.allow = 'accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share';
+    f.referrerPolicy = 'strict-origin-when-cross-origin';
+    f.allowFullscreen = true;
+    btn.parentNode.replaceChild(f, btn);
+    f.focus();
+  });
+})();
