@@ -68,7 +68,8 @@
         <div class="panel">
           <h2 class="center">Send us your prayer request</h2>
           <p class="center">Write your request below and tap <strong>Send</strong>. Your email app will open with everything filled in — just press send. A first name is plenty.</p>
-          <form class="prayer-form" id="prayer-form" action="mailto:contact@minee.us?subject=Prayer%20Request" method="post" enctype="text/plain">
+          <noscript><p class="center"><a class="btn btn-navy" href="mailto:contact@minee.us?subject=Prayer%20Request&body=First%20name%20(optional)%3A%0D%0A%0D%0AHow%20can%20we%20pray%20for%20you%3F%0D%0A%0D%0A">Email a Prayer Request</a></p></noscript>
+          <form class="prayer-form" id="prayer-form">
             <label for="pr-name">First name <span class="optional">(optional)</span></label>
             <input id="pr-name" name="name" type="text" autocomplete="given-name" maxlength="60">
             <label for="pr-request">How can we pray for you?</label>
