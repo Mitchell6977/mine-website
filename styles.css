@@ -192,8 +192,67 @@ a:hover { color: var(--gold-text); }
   line-height: 1.3;
   letter-spacing: 0.02em;
   color: var(--gold-light);
-  margin: 0.5rem 0 0;
+  margin: 0.7rem 0 0;
 }
+.intro-music-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.45rem;
+  min-height: 44px;
+  margin: 0.85rem auto 0;
+  padding: 0.45rem 1.15rem;
+  border: 2px solid var(--gold-light);
+  border-radius: 999px;
+  background: var(--navy);
+  color: #fff;
+  font-family: 'Inter', system-ui, sans-serif;
+  font-size: 0.95rem;
+  font-weight: 600;
+  letter-spacing: 0.02em;
+  cursor: pointer;
+}
+.intro-music-btn:hover {
+  background: var(--navy-dark);
+  color: #fff;
+}
+.intro-music-btn:focus-visible {
+  outline: 3px solid var(--gold-light);
+  outline-offset: 3px;
+}
+.intro-music-btn.is-playing {
+  background: var(--gold);
+  border-color: var(--gold);
+  color: var(--navy-dark);
+}
+.intro-music-btn.is-playing:hover {
+  background: var(--gold-light);
+  border-color: var(--gold-light);
+  color: var(--navy-dark);
+}
+.intro-music-btn:disabled {
+  opacity: 0.85;
+  cursor: wait;
+}
+.intro-music-btn svg {
+  width: 1.2rem;
+  height: 1.2rem;
+  flex-shrink: 0;
+  fill: currentColor;
+}
+.intro-music-btn .icon-pause { display: none; }
+.intro-music-btn.is-playing .icon-play { display: none; }
+.intro-music-btn.is-playing .icon-pause { display: block; }
+.intro-music-credit {
+  margin: 0.5rem auto 0;
+  max-width: 40rem;
+  font-size: 0.78rem;
+  line-height: 1.45;
+  color: #94a3b8;
+}
+.intro-music-credit cite { font-style: italic; color: #cbd5e1; }
+.intro-music-credit a { color: #cbd5e1; }
+.intro-music-credit a:hover { color: var(--gold-light); }
 
 /* ---------- Hero ---------- */
 .hero {
@@ -513,4 +572,5 @@ blockquote.scripture cite {
   .step { padding: 4.25rem 1.25rem 1.25rem; }
   .step::before { left: 1.25rem; top: 1.25rem; }
   .btn { width: 100%; }
+  .intro-music-btn { width: auto; }
 }
