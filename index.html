@@ -1,122 +1,157 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>M.I.N.E. - Morris International Novice Everything</title>
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
-<style>
-  :root {
-    --navy: #1a365d;
-    --gold: #c9a227;
-    --light: #f8fafc;
-    --text: #1e293b;
-    --muted: #64748b;
-  }
-  * { box-sizing: border-box; }
-  body {
-    margin: 0;
-    font-family: 'Inter', system-ui, sans-serif;
-    line-height: 1.7;
-    color: var(--text);
-    background: var(--light);
-  }
-  header {
-    background: var(--navy);
-    color: white;
-    padding: 2.5rem 1.5rem 2rem;
-    text-align: center;
-  }
-  header h1 {
-    font-family: 'Playfair Display', serif;
-    font-size: 3rem;
-    margin: 0 0 0.25rem;
-    letter-spacing: 1px;
-  }
-  header p.tagline {
-    margin: 0 0 1.5rem;
-    font-size: 1.1rem;
-    opacity: 0.9;
-  }
-  nav {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 0.5rem 1.25rem;
-    font-size: 0.95rem;
-  }
-  nav a {
-    color: white;
-    text-decoration: none;
-    padding: 0.35rem 0.75rem;
-    border-radius: 999px;
-    transition: background 0.2s;
-  }
-  nav a:hover {
-    background: rgba(255,255,255,0.15);
-  }
-  main {
-    max-width: 800px;
-    margin: 0 auto;
-    padding: 2.5rem 1.5rem;
-  }
-  .card {
-    background: white;
-    border-radius: 12px;
-    padding: 2rem;
-    box-shadow: 0 4px 20px rgba(0,0,0,0.08);
-  }
-  h2 {
-    color: var(--navy);
-    margin-top: 0;
-    font-size: 1.75rem;
-  }
-  .highlight {
-    color: var(--gold);
-    font-weight: 600;
-  }
-  footer {
-    text-align: center;
-    padding: 2rem 1rem;
-    color: var(--muted);
-    font-size: 0.9rem;
-  }
-  @media (max-width: 600px) {
-    header h1 { font-size: 2.25rem; }
-    nav { font-size: 0.85rem; gap: 0.4rem 0.8rem; }
-    .card { padding: 1.5rem; }
-  }
-</style>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>M.I.N.E. — Find Hope and Peace with God | Morris International Novice Everything</title>
+  <meta name="description" content="M.I.N.E. shares the Gospel of Jesus Christ from the King James Bible, prays with people, and offers practical business help from Cedartown, Georgia. Learn how to be saved or send a prayer request.">
+  <link rel="canonical" href="https://www.minee.us/">
+  <meta name="theme-color" content="#1a365d">
+  <link rel="icon" href="favicon.svg" type="image/svg+xml">
+
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="M.I.N.E.">
+  <meta property="og:title" content="M.I.N.E. — Find Hope and Peace with God | Morris International Novice Everything">
+  <meta property="og:description" content="M.I.N.E. shares the Gospel of Jesus Christ from the King James Bible, prays with people, and offers practical business help from Cedartown, Georgia. Learn how to be saved or send a prayer request.">
+  <meta property="og:url" content="https://www.minee.us/">
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="M.I.N.E. — Find Hope and Peace with God | Morris International Novice Everything">
+  <meta name="twitter:description" content="M.I.N.E. shares the Gospel of Jesus Christ from the King James Bible, prays with people, and offers practical business help from Cedartown, Georgia. Learn how to be saved or send a prayer request.">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Playfair+Display:ital,wght@0,700;1,400&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+  <script>document.documentElement.classList.add('js');</script>
 </head>
 <body>
-<header>
-  <h1>M.I.N.E.</h1>
-  <p class="tagline">Morris International Novice Everything</p>
-  <nav>
-    <a href="index.html">Home</a>
-    <a href="about.html">About</a>
-    <a href="business.html">Business</a>
-    <a href="ministries.html">Ministries</a>
-    <a href="mission.html">Mission</a>
-    <a href="vision.html">Vision</a>
-    <a href="contact.html">Contact</a>
-  </nav>
-</header>
+  <a class="skip-link" href="#main">Skip to main content</a>
 
-<main>
-  <div class="card">
-    <h2>Welcome</h2>
-    <p>Umbrella organization uniting practical business guidance and Christian ministry.</p>
-    <p><span class="highlight">M.I.N.E. LLC</span> — Business & Consulting<br>
-       <span class="highlight">MINE Ministries</span> — Christian Outreach & Gospel Teaching</p>
-    <p>Helping people with real-life problems through research, planning, property perspectives, and the clear teaching of the King James Version Bible.</p>
-    <p>Based in Cedartown / Polk County, Georgia.</p>
-  </div>
-</main>
+  <header class="site-header">
+    <div class="container header-inner">
+      <a class="logo" href="index.html" aria-label="M.I.N.E. home">
+        <span class="logo-mark">M.I.N.E.</span>
+        <span class="logo-sub">Morris International Novice Everything</span>
+      </a>
+      <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="site-nav">
+        <span class="nav-toggle-bars" aria-hidden="true"></span>
+        Menu
+      </button>
+      <nav id="site-nav" class="site-nav" aria-label="Main">
+        <ul>
+        <li><a href="index.html" aria-current="page">Home</a></li>
+        <li><a href="saved.html">How to Be Saved</a></li>
+        <li><a href="live.html">Watch Live</a></li>
+        <li><a href="ministries.html">Ministries</a></li>
+        <li><a href="prayer.html">Prayer</a></li>
+        <li><a href="business.html">Business</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
 
-<footer>
-  All for the glory of Jesus Christ. &copy; 2026 M.I.N.E.
-</footer>
+  <main id="main">
+    <section class="hero" aria-labelledby="hero-title">
+      <div class="container">
+        <span class="eyebrow">MINE Ministries · Cedartown, Georgia</span>
+        <h1 id="hero-title">Find hope and peace with God through Jesus Christ</h1>
+        <p class="lead">We are a small Christian ministry and business sharing the good news of Jesus Christ from the King James Bible, praying with people, and helping with real-life problems.</p>
+        <div class="btn-row">
+          <a class="btn btn-primary" href="saved.html">How to Be Saved</a>
+          <a class="btn btn-outline" href="prayer.html">Request Prayer</a>
+          <a class="btn btn-outline" href="live.html">Watch Live</a>
+        </div>
+        <blockquote class="verse">
+          “Come unto me, all ye that labour and are heavy laden, and I will give you rest.”
+          <cite>Matthew 11:28 (KJV)</cite>
+        </blockquote>
+      </div>
+    </section>
+
+    <section class="section" aria-labelledby="how-title">
+      <div class="container">
+        <div class="section-title">
+          <h2 id="how-title">How we can help</h2>
+          <p>Whether you have questions about God, need someone to pray with you, or need practical advice, we would be glad to hear from you.</p>
+        </div>
+        <div class="cards">
+          <article class="card">
+            <h3>Have questions about God?</h3>
+            <p>Learn in plain words what the Bible says about God’s love, our sin, and how Jesus Christ saves everyone who trusts in Him.</p>
+            <a class="card-link" href="saved.html">How to be saved →</a>
+          </article>
+          <article class="card">
+            <h3>MINE Ministries</h3>
+            <p>King James Version Bible teaching, preaching the Gospel, prayer and discipleship, evangelism and outreach in Polk County, Georgia.</p>
+            <a class="card-link" href="ministries.html">Our ministry →</a>
+          </article>
+          <article class="card">
+            <h3>Need prayer?</h3>
+            <p>Whatever you are facing, you don’t have to face it alone. Send us your prayer request and we will pray for you.</p>
+            <a class="card-link" href="prayer.html">Request prayer →</a>
+          </article>
+          <article class="card">
+            <h3>Business help</h3>
+            <p>M.I.N.E. LLC offers consulting, research and planning for personal and business challenges in Georgia and beyond.</p>
+            <a class="card-link" href="business.html">Business services →</a>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section section-alt" aria-labelledby="who-title">
+      <div class="container narrow center">
+        <img class="avatar" src="images/mitchell-home.svg" width="480" height="480" alt="Ollie Mitchell Morris, founder of M.I.N.E." loading="lazy" decoding="async">
+        <h2 id="who-title">Who we are</h2>
+        <p>M.I.N.E. — Morris International Novice Everything — is an umbrella organization uniting Christian ministry and practical business guidance. It was founded by Ollie Mitchell Morris (Mitchell) and is based in Cedartown / Polk County, Georgia.</p>
+        <p><span class="label-gold">MINE Ministries</span> — Christian outreach &amp; Gospel teaching<br>
+           <span class="label-gold">M.I.N.E. LLC</span> — Business &amp; consulting</p>
+        <a class="btn btn-outline-navy" href="about.html">About us</a>
+      </div>
+    </section>
+
+    <section class="cta-band" aria-labelledby="cta-title">
+      <div class="container">
+        <h2 id="cta-title">Have a question? Just ask.</h2>
+        <p>No question is too simple. Send us an email and we will answer from the Bible as best we can.</p>
+        <div class="btn-row">
+          <a class="btn btn-primary" href="mailto:contact@minee.us?subject=Questions%20about%20salvation">Email your question</a>
+          <a class="btn btn-outline" href="contact.html">Contact us</a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div>
+          <h2>M.I.N.E.</h2>
+          <p>Morris International Novice Everything — MINE Ministries and M.I.N.E. LLC.<br>Cedartown, Georgia</p>
+        </div>
+        <div>
+          <h2>Get in touch</h2>
+          <ul>
+            <li><a href="mailto:contact@minee.us">contact@minee.us</a></li>
+            <li><a href="tel:+14708109308">470-810-9308</a></li>
+            <li><a href="mailto:contact@minee.us?subject=Prayer%20Request&body=First%20name%20(optional)%3A%0D%0A%0D%0AHow%20can%20we%20pray%20for%20you%3F%0D%0A%0D%0A">Send a prayer request</a></li>
+          </ul>
+        </div>
+        <div>
+          <h2>Start here</h2>
+          <ul>
+            <li><a href="saved.html">How to be saved</a></li>
+            <li><a href="ministries.html">MINE Ministries</a></li>
+            <li><a href="business.html">Business consulting</a></li>
+          </ul>
+        </div>
+      </div>
+      <p class="footer-bottom">All for the glory of Jesus Christ. &copy; 2026 M.I.N.E.</p>
+    </div>
+  </footer>
+
+  <script src="script.js" defer></script>
 </body>
 </html>
