@@ -14,6 +14,18 @@
       toggle.focus();
     }
   });
+  nav.querySelectorAll('a').forEach(function (link) {
+    link.addEventListener('click', function () {
+      nav.classList.remove('open');
+      toggle.setAttribute('aria-expanded', 'false');
+    });
+  });
+  document.addEventListener('click', function (e) {
+    if (!nav.classList.contains('open')) return;
+    if (nav.contains(e.target) || toggle.contains(e.target)) return;
+    nav.classList.remove('open');
+    toggle.setAttribute('aria-expanded', 'false');
+  });
 })();
 
 // Home intro: tap-to-play hymn (loaded only after the first tap)
