@@ -3,28 +3,29 @@
   var toggle = document.querySelector('.nav-toggle');
   var nav = document.getElementById('site-nav');
   if (!toggle || !nav) return;
-  toggle.addEventListener('click', function () {
-    var open = nav.classList.toggle('open');
+  function setOpen(open) {
+    nav.classList.toggle('open', open);
     toggle.setAttribute('aria-expanded', open ? 'true' : 'false');
+    document.body.classList.toggle('nav-open', open);
+  }
+  toggle.addEventListener('click', function () {
+    setOpen(!nav.classList.contains('open'));
   });
   document.addEventListener('keydown', function (e) {
     if (e.key === 'Escape' && nav.classList.contains('open')) {
-      nav.classList.remove('open');
-      toggle.setAttribute('aria-expanded', 'false');
+      setOpen(false);
       toggle.focus();
     }
   });
   nav.querySelectorAll('a').forEach(function (link) {
     link.addEventListener('click', function () {
-      nav.classList.remove('open');
-      toggle.setAttribute('aria-expanded', 'false');
+      setOpen(false);
     });
   });
   document.addEventListener('click', function (e) {
     if (!nav.classList.contains('open')) return;
     if (nav.contains(e.target) || toggle.contains(e.target)) return;
-    nav.classList.remove('open');
-    toggle.setAttribute('aria-expanded', 'false');
+    setOpen(false);
   });
 })();
 
@@ -124,4 +125,24 @@
     btn.parentNode.replaceChild(f, btn);
     f.focus();
   });
+})();
+
+
+// Gentle scroll-reveal; skipped when the visitor prefers reduced motion
+(function () {
+  var els = document.querySelectorAll('.reveal');
+  if (!els.length) return;
+  var reduce = window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  if (reduce || !('IntersectionObserver' in window)) {
+    els.forEach(function (el) { el.classList.add('is-in'); });
+    return;
+  }
+  var io = new IntersectionObserver(function (entries) {
+    entries.forEach(function (entry) {
+      if (!entry.isIntersecting) return;
+      entry.target.classList.add('is-in');
+      io.unobserve(entry.target);
+    });
+  }, { threshold: 0.12, rootMargin: '0px 0px -6% 0px' });
+  els.forEach(function (el) { io.observe(el); });
 })();
